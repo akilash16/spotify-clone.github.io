@@ -1,0 +1,257 @@
+.MusicPlayer{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+}
+.songImage{
+    width: 120px;
+    min-width: 120px;
+    height: 120px;
+    background-color: darkturquoise;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 14px rgb(167, 20, 125);
+}
+.songImage img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+.songAttribute{
+    width: 100%;
+    padding-left: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.songAttribute .top, .songAttribute .bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.songAttribute .top .left,
+.songAttribute .top .right,
+.songAttribute .top .middle {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+.songAttribute .top .left i,
+.songAttribute .top .right i,
+.songAttribute .top .middle i{
+    margin: 0px 10px;
+}
+.songAttribute .top .left .loved{
+    font-size: 21px;
+    color: #e31794;
+    filter: drop-shadow(0 1px 4px #f715a1);
+}
+.songAttribute .top .left .download{
+    font-size: 21px;
+    color: #000000;
+    filter: drop-shadow(0 1px 5px #000000);
+}
+.songAttribute .top .right i{
+    font-size: 20px;
+    color: rgba(40, 241, 36, 0.908);
+    filter: drop-shadow(0 0 8px #15f728);
+}
+.songAttribute .top .middle i{
+    font-size: 27px;
+    color: #dddced;
+}
+.songAttribute .top .middle .pause{
+    font-size: 34px;
+    color: #15f728;
+}
+.songAttribute .top .middle .play{
+    font-size: 34px;
+}
+.songAttribute .bottom{
+    margin: 0px 10px;
+    padding: 10px;
+}
+.songAttribute .bottom .progressBar{
+    position: relative;
+    height: 5px;
+    width: 78%;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    appearance: none;
+    background-color: rgba(255,255,255,0.1);
+}
+.bottom .progressBar::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    background: #848484;
+    width: var(--played-width);
+    height: 100%;
+    border-radius: 10px;
+    z-index: 2;
+    transition: width 250ms linear;
+  }
+.bottom .progressBar::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+.bottom .currentTime,
+.bottom .duration {
+  color: #f4eeee;
+  font-size: 12px;
+  font-weight: bold;
+}
+.left .download i:hover{
+    color: #15f728;
+    filter: drop-shadow(0px 0px 4px #15f728 );
+}
+.left .download i{
+    color: #1fa3fa;
+    filter: drop-shadow(0px 0px 4px #1fa3fa );
+}
+.middle .back  i:hover,
+.middle .forward i:hover,
+.middle .pausePlay i:hover{
+    color: #e317b0ed;
+    cursor: pointer;
+    filter: drop-shadow(0px 0px 1px #e31794);
+}
+.bottom .progressBar:hover{
+    cursor:pointer;
+}
+
+@media screen and (max-width:550px) {
+    .MusicPlayer{
+        position: absolute;
+        left: -60px;
+        width: 100%;
+        bottom: 5px;
+        height: 4px;
+        
+    }
+    .songImage{
+        position: absolute;
+        bottom: 10px !important;
+        width: 45px !important;
+        left: -10px;
+        min-width: 45px !important;
+        height: 45px !important;
+        background-color: darkturquoise;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 0 14px rgb(167, 20, 125);
+    }
+    .songAttribute .top .left .loved{
+        position: absolute;
+        left: 50px !important;
+        margin-bottom: 55px;
+        font-size: 21px;
+        color: #e31794;
+        filter: drop-shadow(0 1px 4px #f715a1);
+    }
+    .songAttribute .top .left .download{
+        position: absolute;
+        left: 50px !important;
+        margin-top: 12px !important;
+    }
+    .songAttribute .bottom .progressBar{
+        position: absolute;
+        top: 0;
+        margin-left: 70px !important;
+        width: 85% !important;
+    }
+    .songAttribute .top .middle{
+        position: absolute;
+        bottom: 25px !important;
+        margin-left: 150px !important;
+    }
+    .songAttribute .top .middle i,
+    .songAttribute  .pausePlay i{
+        font-size: 19px !important;
+    }
+    .songAttribute .bottom .currentTime{
+        position: absolute;
+        bottom: 30px;
+        margin-left: 70px !important;
+    }
+    .songAttribute .bottom .duration{
+        position: absolute;
+        bottom: 32px;
+        /* font-size: 9px !important; */
+        margin-left: 300px !important;
+        right: -40px;
+    }
+    .songAttribute .top .right{
+        position: absolute;
+        top: -50px !important;
+        right: -50px !important;
+    }
+}
+@media screen and (max-width:880px) {
+    .MusicPlayer{
+        position: absolute;
+        width: 100%;
+        bottom: 5px;
+        height: 5px;
+        
+    }
+    .songImage{
+        position: absolute;
+        bottom:10px !important;
+        left: 0px;
+        width: 50px;
+        min-width: 60px;
+        height: 60px;
+        background-color: darkturquoise;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 0 14px rgb(167, 20, 125);
+    }
+    .songAttribute .top .left .loved{
+        position: absolute;
+        left: 70px;
+        margin-bottom: 55px;
+        font-size: 21px;
+        color: #e31794;
+        filter: drop-shadow(0 1px 4px #f715a1);
+    }
+    .songAttribute .top .left .download{
+        position: absolute;
+        left: 70px;
+        margin-top: 20px;
+    }
+    .songAttribute .bottom .progressBar{
+        position: absolute;
+        top: 0;
+        margin-left: 80px;
+        width: 70%;
+    }
+    .songAttribute .top .middle{
+        position: absolute;
+        bottom: 20px;
+        margin-left: 165px;
+    }
+    .songAttribute .bottom .currentTime{
+        position: absolute;
+        bottom: 30px;
+        margin-left: 90px;
+    }
+    .songAttribute .bottom .duration{
+        position: absolute;
+        bottom: 30px;
+        margin-left: 450px;
+    }
+    .songAttribute .top .right{
+        position: absolute;
+        margin-bottom: 55px;
+        right: 30px;
+    }
+}

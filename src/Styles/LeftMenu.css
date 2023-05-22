@@ -1,0 +1,320 @@
+.leftmenu{
+    z-index: 1;
+    width: 280px;
+    height: 100%;
+    min-height: 100vh;
+    background-color:rgba(34, 34, 34, 0.6);
+    backdrop-filter: blur(10px);
+    padding: 20px 15px;
+    overflow: hidden;
+    transition: all 0.7s cubic-bezier(0.175,0.885,0.32,1.275);
+}
+.leftmenu .logoContainer{
+    color: #fff6ff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.leftmenu .logoContainer i{
+    font-size: 30px;
+}
+.leftmenu .logoContainer .spotify:hover{
+    color: #07cb49;
+}
+.leftmenu .logoContainer i:nth-of-type(2){
+    font-size: 15px;
+}
+.leftmenu .logoContainer h2{
+    font-size: 23px;
+    margin-right: 30px;
+    margin-bottom: 5px;
+}
+.searchBox{
+    color: #646397;
+    width: 100%;
+    position: relative;
+    height: 48px;
+    margin-top: 20px;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0px 5px 20px 10px rgb(0, 0, 0,0.7);
+
+}
+.searchBox input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background-color: #1a252e90;
+    padding-left: 50px;
+    color: #fff6ff;
+    font-size: 16px;
+    font-weight: 300;
+}
+.searchBox  .searchIcon{
+    position: absolute;
+    color: #fff6ff;
+    top: 0px;
+    left: 10px;
+    width:30px ;
+    height: 30px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 23px;
+
+}
+.searchBox  .searchIcon:hover{
+    color: #07cb49;
+}
+.MenuContainer{
+    margin: 10px 10px;
+}
+.MenuContainer p
+{
+    color: #dedede;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+.MenuContainer ul{
+    width: 100%;
+    padding: 5px;
+}
+.MenuContainer ul li{
+    list-style: none;
+    margin-bottom: 5px;
+    padding-bottom: 2px;
+    width: 100%;
+    position: relative;
+    ;
+}
+.MenuContainer ul li a{
+    color: #dedede;
+    text-decoration: none;
+    margin-bottom: 5px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+.MenuContainer ul li a i{
+    margin-right: 15px;
+    font-size: 19px;
+    margin-top: 5px;
+    
+}
+.MenuContainer ul li:before{
+    position: absolute;
+    content: "";
+    background-color: #fb51f5;
+    top: 0;
+    width: 0px;
+    height: 100%;
+    border-radius: 20px;
+    left: -12px;
+}
+.MenuContainer ul li:hover::before,
+.MenuContainer ul li.active::before
+{
+    width: 6px;
+    transition: 0.2s;
+}
+.MenuContainer ul li:hover a,
+.MenuContainer ul li.active a{
+    color: #fb51f5;
+}
+.playlistContainer{
+    margin: 5px;
+    cursor: pointer;
+}
+.playlistContainer .nameContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff6ff;
+    font-size: 15px;
+}
+.playlistContainer .nameContainer i{
+    font-size: 25px;   
+}
+.playlistContainer .nameContainer p{
+    color: #dedede;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.playlistContainer .playlistScroll{
+    height: 140px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: relative;
+    margin: 10px 0px;
+}
+.playlistContainer .playlistScroll .playlist{
+    display: flex;
+    align-items: center;
+    color: #dedede;
+}
+.playlistContainer .playlistScroll .playlist a{
+    text-decoration: none;
+    color: #fff6ff;
+}
+.playlistContainer .playlistScroll .playlist p{
+    font-size: 15px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-bottom: 6px;
+}
+.playlistContainer .playlistScroll .playlist p:hover{
+    font-size: 17px;
+}
+.playlistContainer .playlistScroll .playlist .list{
+    margin-right: 25px;
+    font-size: 18px;
+   
+}
+.playlistContainer .playlistScroll .playlist .trash{
+    margin-left: auto;
+    font-size: 18px;
+}
+.playlistContainer .playlistScroll .playlist:hover{
+    transition: 0.3s ease;
+}
+.playlistContainer .playlistScroll .playlist a:hover{
+    color: #fb51f5;
+    transition: 0.3s ease;
+}
+.playlistContainer .playlistScroll .playlist .trash:hover{
+    color: #00feff;
+    font-size: 20px;
+}
+.trackList .topTrack img{
+    width:40px;
+    height: 40px;
+    margin-right: 20px;
+
+}
+.trackList{
+    border-top: 1px solid #646397;
+}
+.trackList .topTrack{
+    padding-top:15px ;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.trackList .topTrack p{
+    color: #dedede;
+    font-size: 16px;
+    font-weight: 500;
+}
+.trackList .topTrack p span{
+    color: #646397;
+    font-size: 12px;
+    display: block;
+
+}
+.trackList .bottomTrack{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #dededea9;
+    
+}
+.trackList .bottomTrack ::-webkit-scrollbar-thumb{
+    scrollbar-color: #07cb49;
+    scroll-behavior: smooth;
+}
+.trackList .bottomTrack i:hover{
+    color: #fa32f3;
+    cursor:pointer;
+}
+
+@media screen and (max-width:550px) {
+    .leftmenu{
+        width: 40px;
+        min-width: 40px !important;
+        z-index: 1 !important;
+    }
+    .leftmenu .logoContainer{
+        margin-left: -13px;
+    }
+    
+    .leftmenu .logoContainer h2{
+        padding-left: 8px;
+        font-size: medium;
+    }
+    .MenuContainer .title{
+        margin-left: -10px;
+        margin-bottom: 10px;
+    }
+    .MenuContainer ul li a i{
+        margin-bottom: 30px !important;
+        font-size: 19px !important;
+        margin-left: -9px !important;
+    }
+    .MenuContainer ul li:hover::before,
+    .MenuContainer ul li.active::before
+    {
+        width: 4px;
+        height: 5px;
+        transition: 0.2s;
+    }
+    .MenuContainer ul li:hover a,
+    .MenuContainer ul li.active a{
+        color: #fb51f5;
+    }
+    .MenuContainer ul li a span{
+        display: none;
+    }
+    .trackList{
+        display: none;
+    }
+    .playlistContainer{
+        display: none;
+    }
+    .searchBox{
+        display: none;
+    }
+}
+@media screen and ( max-width:880px) {
+    .leftmenu{
+        width: 90px;
+        min-width: 90px;
+    } 
+    .logoContainer i{
+        margin-bottom: 40px;
+        margin-left: 10px;
+        
+    }
+    .leftmenu .logoContainer i{
+        font-size: 45px;
+    }
+    .logoContainer h2{
+        margin-top: 60px;
+        margin-left: -59px;
+    }
+    .MenuContainer {
+        margin-top: 50px;
+    }
+    .MenuContainer ul li a i{
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+    .MenuContainer ul li a span{
+        display: none;
+    }
+    .trackList{
+        display: none;
+    }
+    .playlistContainer{
+        display: none;
+    }
+    .searchBox{
+        display: none;
+    }
+   
+}
+
